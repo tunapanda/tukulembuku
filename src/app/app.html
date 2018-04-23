@@ -1,0 +1,55 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21" style="background-color:#64B3DD;">
+    <div id="side-menu21-container1">
+      <img src="assets/img/9M75Kp5qSSGtVIIkt0Sr_kitty-cat-kitten-pet-45201.jpeg" style="display:block;width:90%;height:auto;margin-left:auto;margin-right:auto;" />
+      <h5 id="side-menu21-heading5" style="color:#000000;">
+        Jane Doe
+      </h5>
+    </div>
+    <ion-list id="side-menu21-list1">
+      <ion-item color="none" menuClose="" on-click="goToMyLibrary()" id="side-menu21-list-item1">
+        <ion-icon name="person" item-left></ion-icon>
+        My Library
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToCategories()" id="side-menu21-list-item4">
+        <ion-icon name="pricetags" item-left></ion-icon>
+        Categories
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToGuide()" id="side-menu21-list-item5">
+        <ion-icon name="flag" item-left></ion-icon>
+        Languages
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToNotifications()" id="side-menu21-list-item6">
+        <ion-icon name="alert" item-left></ion-icon>
+        Notifications
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToMyFriends()" id="side-menu21-list-item7">
+        <ion-icon name="people" item-left></ion-icon>
+        My Friends
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToMyProgress()" id="side-menu21-list-item8">
+        <ion-icon name="stats" item-left></ion-icon>
+        My Progress
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToMyStories()" id="side-menu21-list-item9">
+        <ion-icon name="megaphone" item-left></ion-icon>
+        My Stories
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToListen()" id="side-menu21-list-item12">
+        <ion-icon name="headset" item-left></ion-icon>
+        Listen
+      </ion-item>
+      <ion-item color="none" href-inappbrowser="page9" id="side-menu21-list-item10">
+        <ion-icon name="log-out" item-left></ion-icon>
+        Sign Out
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
