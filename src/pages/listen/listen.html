@@ -1,48 +1,24 @@
-<!DOCTYPE html>
-<html >
-<head >
-	<meta charset="utf-8" >
-	<meta name="viewport"
-	      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" >
-	<title ></title >
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sound Recorder & Player
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-	<link href="lib/ionic/css/ionic.css"
-	      rel="stylesheet" >
-	<link href="css/style.css"
-	      rel="stylesheet" >
-
-	<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-	<link href="css/ionic.app.css" rel="stylesheet">
-	-->
-
-	<!-- ionic/angularjs js -->
-	<script src="lib/ionic/js/ionic.bundle.js"> </script >
-
-	<!-- cordova script (this will be a 404 during development) -->
-	<script src="cordova.js"></script>
-
-	<!-- your app's js -->
-	<script src="js/app.js" ></script >
-</head>
-<body ng-app="soundboard" >
-
-<ion-pane >
-	<ion-header-bar class="bar-positive" >
-		<h1 class="title" >Soundboard</h1 >
-	</ion-header-bar >
-	<ion-content >
-
-		<ion-list >
-			<ion-item class="item-avatar-right item-icon-right" ng-repeat="sound in model.sound"
-			ng-click="play(sound)">
-				<img ng-src="{{sound.image}}" alt="">
-				<h2> {{ sound.title }} </h2>
-				<p> {{ sound.desc }} </p>
-				<i class="icon ion-volume-high"></i>
-			</ion-item>
-		</ion-list >
-
-	</ion-content >
-</ion-pane >
-</body >
-</html >
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        <button ion-button primary (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off"></ion-icon>&nbsp;&nbsp;Stop Record</button>
+        <button ion-button primary (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic"></ion-icon>&nbsp;&nbsp;Start Record</button>
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item *ngFor="let audio of audioList; index as i;">
+      <p>{{audio.filename}}</p>
+      <button ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
+    </ion-item>
+  </ion-list>
+</ion-content>

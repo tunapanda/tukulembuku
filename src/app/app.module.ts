@@ -20,6 +20,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //streaming media
 import { StreamingMedia } from '@ionic-native/streaming-media';
 
+import { Media } from '@ionic-native/media';
+import { File } from '@ionic-native/file';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -56,7 +59,9 @@ import { StreamingMedia } from '@ionic-native/streaming-media';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    StreamingMedia
+    StreamingMedia,
+    Media,
+    File
   ]
 })
 export class AppModule {}
