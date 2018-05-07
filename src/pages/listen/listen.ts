@@ -5,6 +5,10 @@ import { Platform } from 'ionic-angular';
 import { Media, MediaObject } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+import { Http } from '@angular/http';
+
 /**
  * Generated class for the ListenPage page.
  *
@@ -32,7 +36,9 @@ export class ListenPage {
   constructor(public navCtrl: NavController,
     private media: Media,
     private file: File,
-    public platform: Platform) {}
+    public platform: Platform,
+    private http:Http, 
+    private socialSharing: SocialSharing ) {}
 
   getAudioList() {
       if(localStorage.getItem("audiolist")) {
@@ -78,6 +84,27 @@ export class ListenPage {
     }
     this.audio.play();
     this.audio.setVolume(0.8);
+  }
+
+  // social sharing
+  regularShare(index){
+    var msg
+    this.socialSharing.share(msg, null, null, null);
+  }
+    
+  whatsappShare(index){
+    var msg
+    this.socialSharing.shareViaWhatsApp(msg, null, null);
+  }
+
+  twitterShare(index){
+    var msg
+    this.socialSharing.shareViaTwitter(msg, null, null);
+  }
+
+  facebookShare(index){
+    var msg
+    this.socialSharing.shareViaFacebook(msg, null, null);
   }
 
 

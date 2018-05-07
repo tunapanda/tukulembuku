@@ -23,6 +23,10 @@ import { StreamingMedia } from '@ionic-native/streaming-media';
 import { Media } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+import { Http } from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -61,7 +65,8 @@ import { File } from '@ionic-native/file';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     StreamingMedia,
     Media,
-    File
+    File,
+    SocialSharing
   ]
 })
 export class AppModule {}
