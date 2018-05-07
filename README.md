@@ -1,14 +1,17 @@
 # TukuleMbuku
 
-One Paragraph of project description goes here
+Tukule Mbuku is sheng, creole(mixture of swahili, english and local languages), for let's read. It is an app that helps students read, listen the post their books, either audio or written books.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+ * Nodejs
+ * Cordova
+ * Ionic
+ * Android SDK
 
 ```
 Give examples
