@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
 import { Platform } from 'ionic-angular';
 import { Media, MediaObject } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
-
-import { Http } from '@angular/http';
 
 /**
  * Generated class for the ListenPage page.
@@ -36,8 +34,7 @@ export class ListenPage {
   constructor(public navCtrl: NavController,
     private media: Media,
     private file: File,
-    public platform: Platform,
-    private http:Http, 
+    public platform: Platform, 
     private socialSharing: SocialSharing ) {}
 
   getAudioList() {

@@ -25,8 +25,6 @@ import { File } from '@ionic-native/file';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 
-import { Http } from '@angular/http';
-
 @NgModule({
   declarations: [
     MyApp,
