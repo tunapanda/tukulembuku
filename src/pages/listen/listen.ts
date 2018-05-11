@@ -84,23 +84,23 @@ export class ListenPage {
   }
 
   // social sharing
-  regularShare(index){
-    var msg
-    this.socialSharing.share(msg, null, null, null);
+  regularShare(file){
+    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+    this.socialSharing.share("Having fun reading", "Tukule Mbuku", msg, null);
   }
     
-  whatsappShare(index){
-    var msg
-    this.socialSharing.shareViaWhatsApp(msg, null, null);
+  whatsappShare(file){
+    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+    this.socialSharing.shareViaWhatsApp(msg, null, 'http://www.tunapanda.org/');
   }
 
-  twitterShare(index){
-    var msg
+  twitterShare(file){
+    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
     this.socialSharing.shareViaTwitter(msg, null, null);
   }
 
-  facebookShare(index){
-    var msg
+  facebookShare(file){
+    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
     this.socialSharing.shareViaFacebook(msg, null, null);
   }
 

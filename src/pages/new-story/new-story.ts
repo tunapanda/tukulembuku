@@ -10,4 +10,9 @@ export class NewStoryPage {
   constructor(public navCtrl: NavController) {
   }
   
+  // @ViewChild('myInput') myInput: ElementRef;
+
+resize() {
+    this.myInput.nativeElement.style.height = this.myInput.nativeElement.scrollHeight + 'px';
+}
 }
