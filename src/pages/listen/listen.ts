@@ -84,24 +84,30 @@ export class ListenPage {
   }
 
   // social sharing
-  regularShare(file){
-    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
-    this.socialSharing.share("Having fun reading", "Tukule Mbuku", msg, null);
-  }
+  // regularShare(file){
+  //   var fil3 = this.file.getFile('/file:\/\//g', file, {});
+  //   var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+  //   this.socialSharing.share("Having fun reading", "Tukule Mbuku", fil3, null);
+  // }
     
-  whatsappShare(file){
-    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
-    this.socialSharing.shareViaWhatsApp(msg, null, 'http://www.tunapanda.org/');
-  }
+  // whatsappShare(file){
+  //   const root_directory = "/file:///g";
+  //   // var msg = this.file.getFile(root_directory, file.filename, {create : false});
+  //   // this.socialSharing.shareViaWhatsApp("Reading is fun.", msg, 'http://www.tunapanda.org/');
+  // }
 
-  twitterShare(file){
-    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
-    this.socialSharing.shareViaTwitter(msg, null, null);
-  }
+  // twitterShare(file){
+  //   // var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+  //   this.socialSharing.shareViaTwitter("Lets learn!", file.name, null);
+  // }
 
-  facebookShare(file){
-    var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
-    this.socialSharing.shareViaFacebook(msg, null, null);
+  // facebookShare(file){
+  //   var msg = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+  //   this.socialSharing.shareViaFacebook(msg, null, null);
+  // }
+
+  regulshare(file){
+    this.socialSharing.share("Reading is fun.", "Tukule Mbuku", file.filename, "http://www.tunapanda.org/");
   }
 
 
