@@ -12,6 +12,7 @@ import { MyStoriesPage } from '../pages/my-stories/my-stories';
 import { SignOutPage } from '../pages/sign-out/sign-out';
 import { NewStoryPage } from '../pages/new-story/new-story';
 import { ListenPage } from '../pages/listen/listen';
+import { DetailPage } from '../pages/detail/detail';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -37,7 +38,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     MyStoriesPage,
     SignOutPage,
     NewStoryPage,
-    ListenPage
+    ListenPage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     MyStoriesPage,
     SignOutPage,
     NewStoryPage,
-    ListenPage
+    ListenPage,
+    DetailPage
   ],
   providers: [
     StatusBar,
