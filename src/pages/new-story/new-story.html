@@ -13,7 +13,7 @@
     <form id="newStory-form6">
       <ion-item id="newStory-input7">
         <ion-label></ion-label>
-        <ion-input type="text" placeholder="Title" ng-model="model.title"></ion-input>
+        <ion-input type="text" placeholder="Title" id="title"></ion-input>
       </ion-item>
       <div class="spacer" style="width:300px;height:21px;" id="newStory-spacer3"></div>
     </form>
@@ -21,11 +21,11 @@
   <form id="newStory-form5">
     <ion-item id="newStory-textarea1">
       <ion-label></ion-label>
-      <ion-textarea placeholder="" rows="18" ng-model="model.story"></ion-textarea>
+      <ion-textarea placeholder="" rows="18" ng-model="model.story" id="content"></ion-textarea>
     </ion-item>
     <!-- <div class="spacer" style="width:300px;height:25px;" id="newStory-spacer2"></div> -->
   </form>
-  <button id="newStory-button5" ion-button color="positive" block ng-click="save_data()">
+  <button id="newStory-button5" ion-button color="positive" *ngFor="let story of stories" block (click)="save_data()">
     Publish!
   </button>
 </ion-content>
